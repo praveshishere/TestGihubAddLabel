@@ -16,3 +16,8 @@ jobs:
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: mylabel
+          
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
