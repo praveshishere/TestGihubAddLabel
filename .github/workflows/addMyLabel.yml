@@ -17,4 +17,3 @@ jobs:
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: mylabel
-          github_token: ${{ secrets.GITHUB_TOKEN }}
