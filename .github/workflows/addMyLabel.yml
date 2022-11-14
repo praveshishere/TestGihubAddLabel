@@ -10,7 +10,21 @@ on:
 
 jobs:
   add_label:
-    permissions: write-all
+    permissions:
+     actions: write
+     checks: write
+     contents: write
+     deployments: write
+     discussions: write
+     issues: write
+     pull-requests: write
+     packages: write
+     repository-projects: write
+     security-events: write
+     statuses: write
+     id-token: write
+     pages: write
+     
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
