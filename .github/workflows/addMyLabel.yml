@@ -1,33 +1,16 @@
-name: Add Label
+name: issue-automation
 
 on:
-  pull_request:
-    types: opened
-  
   issues:
-    types: opened
-  
+    types: [opened]
+  pull_request:
+    types: [opened]
 
 jobs:
-  add_label:
-    permissions:
-     actions: write
-     checks: write
-     contents: write
-     deployments: write
-     discussions: write
-     issues: write
-     pull-requests: write
-     packages: write
-     repository-projects: write
-     security-events: write
-     statuses: write
-     id-token: write
-     pages: write
-     
+  automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-ecosystem/action-add-labels@v1
+      - name: initial labeling
+        uses: andymckay/labeler@master
         with:
-          labels: mylabel
+          add-labels: "mylabel"
